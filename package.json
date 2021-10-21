@@ -2,7 +2,7 @@
   "name": "gcs-browser-upload",
   "version": "1.0.2",
   "description": "Resumable, chunked uploads to Google Cloud Storage from the browser",
-  "main": "dist/Upload.js",
+  "modules": "dist/Upload.js",
   "scripts": {
     "test": "make test",
     "compile": "make compile",
@@ -40,6 +40,7 @@
     "mocha": "^2.4.5",
     "pify": "^2.3.0",
     "random-string": "^0.1.2",
+    "rollup": "^2.58.0",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
     "standard": "^6.0.8"

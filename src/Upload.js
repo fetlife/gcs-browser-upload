@@ -199,10 +199,10 @@ async function safePut () {
   try {
     return await put.apply(null, arguments)
   } catch (e) {
-    if (e instanceof Error) {
-      throw e
-    } else {
+    if (e.isAxiosError) {
       return e
+    } else {
+      throw e
     }
   }
 }

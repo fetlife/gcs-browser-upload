@@ -200,7 +200,7 @@ async function safePut () {
     return await put.apply(null, arguments)
   } catch (e) {
     if (e.isAxiosError) {
-      return e
+      return e.response
     } else {
       throw e
     }

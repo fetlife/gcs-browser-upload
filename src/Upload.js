@@ -1,4 +1,4 @@
-import { put } from 'axios'
+import axios from 'axios'
 import FileMeta from './FileMeta'
 import FileProcessor from './FileProcessor'
 import debug from './debug'
@@ -197,7 +197,7 @@ function checkResponseStatus (res, opts, allowed = []) {
 
 async function safePut () {
   try {
-    return await put.apply(null, arguments)
+    return await axios.put.apply(null, arguments)
   } catch (e) {
     if (e.isAxiosError) {
       return e.response

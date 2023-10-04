@@ -6,12 +6,12 @@ Chunked, pausable, recoverable uploading to Google Cloud Storage directly from t
 ## How does it work?
 
 1. User selects a file
-1. File + a [Google Cloud Storage resumable upload URL](https://cloud.google.com/storage/docs/json_api/v1/how-tos/upload#resumable) are given to `gcs-browser-upload`
-1. File is read in chunks
-1. A checksum of each chunk is stored in `localStorage` once succesfully uploaded
-1. If the page is closed and re-opened for some reason, the upload can be resumed by passing the same file and URL back to `gcs-browser-upload`. The file will be validated against the stored chunk checksums to work out if the file is the same and where to resume from.
-1. Once the resume index has been found, `gcs-browser-upload` will continue uploading from where it left off.
-1. At any time, the `pause` method can be called to delay uploading the remaining chunks. The current chunk will be finished. `unpause` can then be used to continue uploading the remaining chunks.
+2. File + a [Google Cloud Storage resumable upload URL](https://cloud.google.com/storage/docs/json_api/v1/how-tos/upload#resumable) are given to `gcs-browser-upload`
+3. File is read in chunks
+4. A checksum of each chunk is stored in `localStorage` once successfully uploaded
+5. If the page is closed and re-opened for some reason, the upload can be resumed by passing the same file and URL back to `gcs-browser-upload`. The file will be validated against the stored chunk checksums to work out if the file is the same and where to resume from.
+6. Once the resume index has been found, `gcs-browser-upload` will continue uploading from where it left off.
+7. At any time, the `pause` method can be called to delay uploading the remaining chunks. The current chunk will be finished. `unpause` can then be used to continue uploading the remaining chunks.
 
 
 ## Example
@@ -97,6 +97,6 @@ make test-watch    // continuously run tests
 
 This project was created by the Engineering team at [Qubit](http://www.qubit.com). As we use open source libraries, we make our projects public where possible.
 
-We’re currently looking to grow our team, so if you’re a JavaScript engineer and keen on ES2016 React+Redux applications and Node micro services, why not get in touch? Work with like minded engineers in an environment that has fantastic perks, including an annual ski trip, yoga, a competitive foosball league, and copious amounts of yogurt.
+We’re currently looking to grow our team, so if you’re a JavaScript engineer and keen on ES2016 React+Redux applications and Node micro services, why not get in touch? Work with likeminded engineers in an environment that has fantastic perks, including an annual ski trip, yoga, a competitive foosball league, and copious amounts of yogurt.
 
-Find more details on our [Engineering site](https://eng.qubit.com). Don’t have an up to date CV? Just link us your Github profile! Better yet, send us a pull request that improves this project.
+Find more details on our [Engineering site](https://eng.qubit.com). Don’t have an up-to-date CV? Just link us your GitHub profile! Better yet, send us a pull request that improves this project.
